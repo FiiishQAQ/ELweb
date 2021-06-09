@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/theme.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="nav">
+        <a href="#">
+            <span class="logo">
+                <img src="../images/logo4.png" width='80' height='60'">
+            </span>
+        </a>
+        <ul class="nav">
+            <li><a class="item" href="./home.html">主页</a></li>
+            <li><a class="item" href="./more.html">了解更多</a></li>
+            <li><a class="item" id="active" href="./passage.html">相关内容</a></li>
+            <li><a class="item" href="./about.html">关于我们</a></li>
+        </ul>
+    </div>
+
+    <a name="s2" href="#s2">
+        <div class="page_title" style="background-image: url(../images/bg3.jpg);">
+            <p class="heading">相关的内容</p>
+            <p>
+                <a href="./more.html">
+                    <span class="round">简要了解相关内容</span>
+                </a>
+            </p>
+        </div>
+    </a>
+
+    <div id="a" class="pn_instructer" clicks="">
+        <span style="font-weight: normal;font-size: 24px;line-height:60px;">导航</span>
+        <span id="pn_icon">+</span>
+    </div>
+
+    <div id="b" class="page_nav">
+        <ul class="page_nav">
+            <li><p id="pn_text">导航</p>
+            <li><a class="pn_item" href="#q3">6.17更新</a></li>
+            <li><a class="pn_item" href="#q1" style="border:0;">更早的更新</a></li>
+        </ul>
+    </div>
+
+    <script>
+        var ins = document.getElementById("a");
+        var pnv = document.getElementById("b");
+        var pnicon = document.getElementById("pn_icon");
+        var i = 0;
+        ins.addEventListener("click", function(){
+            if(i==0){
+                pnv.style.height = "134px"; /*32+51*条目数*/
+                pnicon.style.transform = "rotate(45deg)";
+                i=1;
+            } else {
+                pnv.style.height = "0";
+                pnicon.style.transform = "rotate(0)";
+                i=0;
+            }
+        });
+    </script>
+
+    <div class="content_box">
+        <a name="q3" >
+            <div class="content">
+                <p class="heading">6月17日更新</p>
+                <a href="http://politics.people.com.cn/n1/2021/0604/c1001-32121957.html">
+                    <div class="passage">
+                        <p class="title">打好实现碳达峰碳中和这场硬仗</p>
+                        <p class="abstract">去年9月22日，习近平主席在第七十五届联合国大会一般性辩论上宣布：“中国将提高国家自主贡献力度，采取更加有力的政策和措施，二氧化碳排放力争于2030年前达到峰值，努力争取2060年前实现碳中和。”这是中国基于推动构建人类命运共同体的责任担当和实现可持续发展的内在要求作出的重大战略决策……</p>
+                        <p class="author">2021/6/4 人民网，《人民日报》</p>
+                    </div>
+                </a>
+                <a href="https://epaper.gmw.cn/gmrb/html/2021-04/19/nw.D110000gmrb_20210419_1-10.htm">
+                    <div class="passage">
+                        <p class="title">碳中和将怎样改变我们的生活？</p>
+                        <p class="abstract">从2020年9月的第七十五届联合国大会到不久前刚刚闭幕的全国两会，半年间，“碳中和”从一个陌生的专业词语成为高频热词。近日，由科技部组织召开的以“碳中和的科技创新路径选择”为主题的第S60次香山科学会议对碳达峰、碳中和科技创新进行了深入探讨……</p>
+                        <p class="author">2021/4/19 《光明日报》</p>
+                    </div>
+                </a>
+            </div>
+        </a>
+        <a name="q1">
+            <div class="content" id="last">
+                <p class="heading">更早的更新</p>
+                <a href="https://www.apple.com.cn/newsroom/2020/07/apple-commits-to-be-100-percent-carbon-neutral-for-its-supply-chain-and-products-by-2030/">
+                    <div class="passage">
+                        <p class="title">【碳中和】从中国火到全球，Nature坐不住了 | 一起读Nature & Science 017</p>
+                        <p class="abstract">从今年开年以来，碳中和这个词，就一直热度不减，还有一个与之对应的概念碳达峰，出现的频率也特别高。有网友要我给大家讲讲这方面的话题。因为这个概念目前在中国很火，由于中国的影响力太大，所以在全球也火了。我现在不是有这么一个专门给大家读Nature和Science杂志文章的栏目吗？所以，我还是按照这个套路，给大家读读Nature上的文章。当然，是和碳中和讨论有关的文章。</p>
+                        <p class="author">2020/4/9 复旦赵斌，哔哩哔哩</p>
+                    </div>
+                </a>
+                <a href="https://www.apple.com.cn/newsroom/2020/07/apple-commits-to-be-100-percent-carbon-neutral-for-its-supply-chain-and-products-by-2030/">
+                    <div class="passage">
+                        <p class="title">Apple承诺到2030年实现供应链和产品100%碳中和</p>
+                        <p class="abstract">Apple在全球的运营排放现已实现碳中和，计划比联合国政府间气候变化专门委员会(IPCC)目标提前20年实现全部碳足迹净零……</p>
+                        <p class="author">2020/7/21 Apple</p>
+                    </div>
+                </a>
+            </div>
+        </a>
+    </div>
+
+    <div class="foot">
+        <p>认真做的小网站</br>Copyright@Nobody,2021-2021</p>
+    </div>
+</body>

@@ -1,0 +1,334 @@
+body {
+    font-family:PingFangSC, Verdana, Arial, '微软雅黑','宋体';
+    margin: 0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+p {
+        color:rgb(141, 148, 141);
+        font-size: 18px;
+        opacity: 0.9;
+}
+
+/*导航列表*/
+ul.nav {
+    list-style-type: none;
+    text-align: center;
+    width:100% - 80px;
+    height:60px;
+    margin:0 0 0 80px;
+}
+
+/*导航单元*/
+li a.item {
+    display:block;
+    float:left;
+    text-align:center;
+    line-height: 60px;
+    width:100px;
+    font-size: 16px;
+    color:rgb(104, 117, 112);
+    transition-duration: 0.4s;
+}
+
+/*导航单元鼠标悬停效果*/
+li a.item:hover {
+    color:rgba(57,159,99,1.00);
+    transition-duration:0.4s;
+}
+
+/*被激活的导航单元，指示当前页面*/
+#active {
+    color:rgba(57,159,99,1.00);
+}
+
+/*网页导航*/
+ul.page_nav {
+    list-style-type: none;
+    text-align: left;
+    padding: 0;
+    padding-top: 80px;
+}
+
+/*网页导航单元*/
+li a.pn_item {
+    display:block;
+    line-height: 50px;
+    font-size: 18px;
+    transition-duration:0.4s;
+    color:rgb(191, 201, 195);
+    border-bottom: 1px solid rgb(211, 218, 214);
+}
+
+/*网页导航单元悬停效果*/
+li a.pn_item:hover {
+    color: rgba(57,159,99,1.00);
+    transition-duration: 0.4s;
+}
+
+/*LOGO单元*/
+span.logo {
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    margin:10px;
+    padding:5px;
+    background:rgba(255, 255, 255, 0.8);
+    position:fixed;
+    top:0;
+    text-align: center;
+    z-index: 100;
+}
+
+/*用于容纳导航栏的块*/
+div.nav {
+    width:100%;
+    background:#fff;
+    overflow:visiable;
+    z-index: 10;
+}
+
+/*显示带有图片背景的文章摘要块*/
+div.textField_head {
+    transition-duration:0.8s;
+    padding: 200px 155px 100px 155px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+}
+
+/*背景缩放动画*/
+div.textField_head:hover {
+    transition-duration:0.8s;
+    background-size: 105% auto;
+}
+
+div.textField_head p {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.76);
+    color: #fff;
+}
+
+/*带有图片背景的文字块的标题*/
+div.textField_head p.heading{
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.76);
+    color: #fff;
+    font-size: 50px;
+}
+
+/*带有图片背景的文字块的日期等 */
+div.textField_head p.date {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.76);
+}
+
+/*某页的总标题*/
+div.page_title {
+    padding: 200px 155px 100px 155px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+}
+
+/*网页总标题的文字块的标题*/
+div.page_title p.heading{
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.76);
+    color: #fff;
+    font-size: 50px;
+}
+
+/*网页总标题的文字块的正文*/
+div.page_title p {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.76);
+}
+
+/*网页总标题的文字块的日期时间*/
+div.page_title p.date {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.76);
+}
+
+/*空白背景文字块*/
+div.textField_body{
+    padding: 100px 155px 100px 155px;
+    background: #fff;
+}
+
+/*多个短篇构成的内容区*/
+div.content_box {
+    float: left;
+    padding: 30px 50px 100px 155px;
+    width:50%;
+}
+
+div.passage {
+    background-color: rgb(245, 244, 238);
+    padding:30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition-duration:0.4s;
+}
+
+div.passage:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+    transition-duration:0.4s;
+}
+
+div.passage p.title {
+    font-size:24px;
+    font-weight: bold;
+}
+
+div.passage p.author{
+    font-size: 14px;
+    opacity: 0.9;
+    font-family: 'Merriweather', serif;
+    color:rgb(194, 196, 190);
+}
+
+/*每个短篇的块*/
+div.content {
+    border-bottom: 1px solid rgb(209, 209, 209);
+    padding:30px 0 30px 0;
+}
+
+/*最后一个短片去下划线*/
+#last {
+    border:0;
+}
+
+/*页面导航块*/
+div.page_nav {
+    /* float: right; */
+    height: 0;
+    width: 200px;
+    padding: 0 155px 0 70%;
+    position: sticky;
+    top: 0px;
+}
+
+/*窄页面时指示页面导航*/
+div.pn_instructer {
+    display: none;
+    padding: 5px 155px 5px 155px;
+    background:rgb(235, 238, 235);
+    color:rgb(121, 150, 140);
+    cursor: default;
+}
+
+/*“导航”字样样式*/
+#pn_text {
+    font-weight: normal;
+    font-size: 24px;
+    color:rgb(121, 150, 140);
+    cursor: default;
+}
+
+/*指示开合的+号样式*/
+#pn_icon {
+    font-weight: normal;
+    font-size: 24px;
+    float:right;
+    line-height:60px;
+    transition-duration: 0.4s;
+}
+
+/*标题*/
+p.heading {
+    font-size: 30px;
+    font-weight: bold;
+    opacity: 0.9;
+    color:rgba(57,159,99,1.00);
+}
+
+/*日期时间作者等样式*/
+p.date {
+    font-size: 14px;
+    opacity: 0.9;
+    font-family: 'Merriweather', serif;
+    color:rgb(194, 196, 190);
+}
+
+/*页脚*/
+div.foot {
+    text-align: center;
+    color: #aaa;
+    background-color: rgb(245, 245, 245);
+    padding: 20px 155px 20px 155px;
+    clear: both;
+}
+
+div.foot p{
+    font-size: 12px;
+}
+
+/*醒目的链接*/
+a span.emphasis {
+    /* padding: 0 0 4px 0; */
+    border-bottom: 2px solid;
+    transition-duration:0.4s;
+}
+
+a span.emphasis:hover {
+    /*text-shadow: 0 2px 4px rgb(0, 0, 0);*/
+    transition-duration:0.4s;
+    color: rgba(57,159,99,1.00);
+    border-bottom: 2px solid rgba(57,159,99,1.00);
+}
+
+a span.round {
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-size:24px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.76);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.76);
+    transition-duration:0.4s;
+}
+
+a span.round:hover {
+    color: rgba(57,159,99,1.00);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.76);
+    text-shadow: 0 0 0px rgba(0, 0, 0, 0.76);
+    background-color: #fff;
+    transition-duration:0.4s;
+}
+
+@media screen and (max-width:1000px) {
+    div.content_box {
+        float: none;
+        padding: 0 155px 100px 155px;
+        width:auto;
+    }
+
+    div.page_nav {
+        float: none;
+        width: auto;
+        padding: 0px 155px 0px 155px;
+        height: 0;
+        transition-duration: 0.4s;
+        overflow:hidden;
+        background: rgb(247, 247, 247);
+        position: relative;
+    }
+
+    div.pn_instructer {
+        display: block;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    ul.page_nav {
+        padding: 0;
+    }
+
+    #pn_text {
+        display: none;
+    }
+}

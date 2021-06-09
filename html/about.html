@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/theme.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="nav">
+        <a href="#">
+            <span class="logo">
+                <img src="../images/logo4.png" width='80' height='60'">
+            </span>
+        </a>
+        <ul class="nav">
+            <li><a class="item" href="./home.html">主页</a></li>
+            <li><a class="item" href="./more.html">了解更多</a></li>
+            <li><a class="item" href="./passage.html">相关内容</a></li>
+            <li><a class="item" id="active" href="./about.html">关于我们</a></li>
+        </ul>
+    </div>
+    
+    <a name="s1" href="#s1">
+        <div class="page_title" style="background-image: url(../images/bg1.jpg);">
+            <p class="heading">关于我们</p>
+        </div>
+    </a>
+
+    <div id="a" class="pn_instructer" clicks="">
+        <span style="font-weight: normal;font-size: 24px;line-height:60px;">导航</span>
+        <span id="pn_icon">+</span>
+    </div>
+
+    <div id="b" class="page_nav">
+        <ul class="page_nav">
+            <li><p id="pn_text">导航</p>
+            <li><a class="pn_item" href="#q1">我们是谁？</a></li>
+            <li><a class="pn_item" href="#q2">为什么要做这个网站？</a></li>
+            <li><a class="pn_item" href="#q4" style="border:0;">联系方式</a></li>
+        </ul>
+    </div>
+
+    <script>
+        var ins = document.getElementById("a");
+        var pnv = document.getElementById("b");
+        var pnicon = document.getElementById("pn_icon");
+        var i = 0;
+        ins.addEventListener("click", function(){
+            if(i==0){
+                pnv.style.height = "185px"; /*32+51*条目数*/
+                pnicon.style.transform = "rotate(45deg)";
+                i=1;
+            } else {
+                pnv.style.height = "0";
+                pnicon.style.transform = "rotate(0)";
+                i=0;
+            }
+        });
+    </script>
+
+    <div class="content_box">
+        <a name="q1">
+            <div class="content">
+                <p class="heading">我们是谁？</p>
+                <p>我们是南京大学软件学院的三名大一学生</p>
+            </div>
+        </a>
+        <a name="q2"></a>
+            <div class="content">
+                <p class="heading">为什么要做这么个网页？</p>
+                <p>当下，全球气候形势日趋严重，我们赖以生存的家园正在面临危机。 </p>
+                <p>热爱地球，关心气候，这个小小的网站是我们对全球变暖做出的回应。</p>
+            </div>
+        </a>
+        <a name="q4"></a>
+            <div name="s2" class="content" id="last">
+                <p class="heading">我们的联系方式是？</p>
+                <p>-</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="foot">
+        <p>认真做的小网站</br>Copyright@Nobody,2021-2021</p>
+    </div>
+</body>
